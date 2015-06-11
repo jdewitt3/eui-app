@@ -23,8 +23,5 @@
     "karma-ng-html2js-preprocessor": "^0.1.2",
     "karma-phantomjs-launcher": "^0.2.0",
     "phantomjs": "^1.9.17"
-  },
-  "scripts": {
-    "postinstall": "echo postinstall time; grunt build"
   }
 }

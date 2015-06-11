@@ -1,0 +1,42 @@
+body {
+  padding-bottom: 2em;
+}
+
+a {
+  cursor: pointer;
+}
+
+.success-message, .error-message {
+  position: fixed;
+  width: 100%;
+  padding: .5em 1em;
+  height: 40px;
+  z-index: 255;
+  text-align: center;
+}
+
+.fade-out {
+  transition: .3s linear all;
+  opacity: 1;
+}
+
+.fade-out.ng-hide {
+  opacity: 0;
+}
+
+.header h1 {
+  font-family: "Arial";
+  font-weight: normal;
+}
+
+.form-fields input, .form-fields select {
+  margin-bottom: 1em;
+}
+.form-fields input.ng-touched.ng-invalid, .form-fields select.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+.form-fields .validation-errors p {
+  color: red;
+}
+
+/*# sourceMappingURL=app.css.map */
