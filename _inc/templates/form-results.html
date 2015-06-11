@@ -1,0 +1,41 @@
+<div class="container responses">
+	<div class="row">
+		<div class="col-md-12">
+			<a ng-click="goToForm()">Return to form</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>First</th>
+						<th>Last</th>
+						<th>Address</th>
+						<th>City</th>
+						<th>State</th>
+						<th>Country</th>
+						<th>Zip</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="response in responses track by response.objectId" data-objectId={{response.objectId}}>
+						<td>{{response.firstName}}</td>
+						<td>{{response.lastName}}</td>
+						<td>{{response.streetAddress}}</td>
+						<td>{{response.city}}</td>
+						<td>{{response.state.name}}</td>
+						<td>{{response.country.countryName}}</td>
+						<td>{{response.zip}}</td>
+						<td>{{response.email}}</td>
+						<td>{{response.phone}}</td>
+						<td><a ng-click="editEntry(response.objectId)">update</a> / <a ng-click="deleteEntry(response.objectId)">delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

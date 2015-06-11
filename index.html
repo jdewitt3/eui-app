@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EUI Sample App</title>
+	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+	<link href="_inc/styles/css/app.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="EuiApp" ng-app="euiApp">
+		<ng-include src="'_inc/templates/header.html'"></ng-include>
+		<ng-view></ng-view>
+	</div>
+	<script src="node_modules/angular/angular.js" type="text/javascript"></script>
+	<script src="node_modules/angular-route/angular-route.min.js" type="text/javascript"></script>
+	<script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+	<script src="_inc/lib/lodash.min.js" type="text/javascript"></script>
+	<script src="_inc/js/app.js"></script>
+	<script src="_inc/js/controllers/form-controller.js"></script>
+	<script src="_inc/js/controllers/responses-controller.js"></script>
+	<script src="_inc/js/controllers/notifications-controller.js"></script>
+	<script src="_inc/js/services/notifications-service.js"></script>
+	<script src="_inc/js/services/entry.js"></script>
+	<script src="_inc/js/services/geoname-service.js"></script>
+	<script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>

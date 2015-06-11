@@ -1,0 +1,80 @@
+<div class="container form-fields">
+	<div class="row">
+		<div class="col-md-12" ng-hide="formEntry.objectId">
+			<p>Please fill out the information below so that we may contact you. Asterisks denote required fields.</p>
+		</div>
+		<div class="col-md-12" ng-show="formEntry.objectId">
+			<p>Please update the existing entry below. You may cancel to return to the response listing.</p>
+		</div>
+	</div>
+	<form name="forms.contactForm" novalidate ng-submit="submitForm();">
+		<div class="row">
+			<div class="col-md-6">
+				<label for="FirstName">First Name *</label>
+				<input class="form-control" type="text" name="FirstName" ng-model="formEntry.firstName" ng-required="true" ng-minlength="3" />
+			</div>
+			<div class="col-md-6">
+				<label for="LastName">Last Name *</label>
+				<input type="text" class="form-control" name="LastName" ng-model="formEntry.lastName" ng-required="true" ng-minlength="3" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<label for="StreetAddress">Address</label>
+				<input type="text" class="form-control" name="StreetAddress" ng-model="formEntry.streetAddress" />
+			</div>
+			<div class="col-md-6">
+				<label for="Country">Country</label>
+				<select class="form-control" name="Country" ng-model="formEntry.country" ng-options="country.countryName for country in countries track by country.countryCode" ng-change="updateStateList()">
+					<option value="">--</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<label for="City">City</label>
+				<input type="text" class="form-control" name="City" ng-model="formEntry.city" />
+			</div>
+			<div class="col-md-2">
+				<label for="PostalCode">ZIP</label>
+				<input type="text" class="form-control" name="PostalCode" ng-model="formEntry.zip" />
+			</div>
+			<div class="col-md-6">
+				<label for="StateProvince">State/Province</label>
+				<select class="form-control" name="StateProvince" ng-model="formEntry.state" ng-options="state.name for state in states track by state.name" ng-disabled="!formEntry.country">
+					<option value="">--</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<label for="Phone">Phone *</label>
+				<input type="text" class="form-control" name="Phone" ng-model="formEntry.phone" ng-required="true" />
+			</div>
+			<div class="col-xs-6">
+				<label for="Email">Email *</label>
+				<input type="email" ng-required="true" class="form-control" name="Email" ng-model="formEntry.email" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 validation-errors">
+				<p ng-show="forms.contactForm.FirstName.$invalid && forms.contactForm.FirstName.$touched">Please enter a valid first name (at least 3 characters)</p>
+				<p ng-show="forms.contactForm.LastName.$invalid && forms.contactForm.LastName.$touched">Please enter a valid last name (at least 3 characters)</p>
+				<p ng-show="forms.contactForm.Phone.$invalid && forms.contactForm.Phone.$touched">Please enter a phone number</p>
+				<p ng-show="forms.contactForm.Email.$invalid && forms.contactForm.Email.$touched">Please enter a valid email address</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input class="form-control" ng-hide="formEntry.objectId" ng-disabled="forms.contactForm.$invalid" type="submit" name="Submit" value="Submit" />
+				<input class="form-control" ng-show="formEntry.objectId" ng-disabled="forms.contactForm.$invalid" type="submit" name="Update" value="Update" />
+				<button class="form-control" ng-click="goToResponses()" ng-show="formEntry.objectId">Cancel</button>
+			</div>
+		</div>
+	</form>
+	<div class="row">
+		<div class="col-md-4">
+			<a ng-hide="formEntry.objectId" ng-click="goToResponses()">View Responses</a>
+		</div>
+	</div>
+</div>

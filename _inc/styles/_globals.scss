@@ -1,0 +1,18 @@
+$headerFont: 'Arial';
+
+body {
+	padding-bottom:2em;
+}
+
+a {
+	cursor:pointer;
+}
+
+.success-message, .error-message {
+	position:fixed;
+	width:100%;
+	padding:.5em 1em;
+	height:40px;
+	z-index:255;
+	text-align:center;
+}

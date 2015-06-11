@@ -1,0 +1,13 @@
+.form-fields {
+	input, select {
+		margin-bottom: 1em;
+		&.ng-touched.ng-invalid {
+			border: 1px solid red;
+		}
+	}
+	.validation-errors {
+		p {
+			color: red;
+		}
+	}
+}
