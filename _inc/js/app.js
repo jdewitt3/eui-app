@@ -7,7 +7,7 @@ euiApp.constant('config', {
 	parseApiKey: "oMhvYcxIT4OVqcA7RFLbQsVXDVMgqIOUHmtylPcw",
 	parseApiUrl: "https://api.parse.com/1",
   geonamesUser: 'jdewitt3',
-  geonamesApiUrl: 'https://api.geonames.org'
+  geonamesApiUrl: 'http://api.geonames.org'
 });
 
 
