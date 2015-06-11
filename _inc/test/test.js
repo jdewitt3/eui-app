@@ -121,9 +121,9 @@ describe('FormController', function() {
 		var controller = $controller('FormController', { $scope: $scope });
 		var templateHtml = $templateCache.get('_inc/templates/form-fields.html');
 		formElem = angular.element(templateHtml);
-	    $compile(formElem)($scope);
-	    $scope.$apply();
-	    spyOn($scope, 'saveNewEntry');
+		$compile(formElem)($scope);
+		$scope.$apply();
+		spyOn($scope, 'saveNewEntry');
 		$scope.submitForm();
 		$httpBackend.flush();
 		expect($scope.saveNewEntry).toHaveBeenCalled();
@@ -133,9 +133,9 @@ describe('FormController', function() {
 		var controller = $controller('FormController', { $scope: $scope });
 		var templateHtml = $templateCache.get('_inc/templates/form-fields.html');
 		formElem = angular.element(templateHtml);
-	    $compile(formElem)($scope);
-	    $scope.$apply();
-	    spyOn($scope, 'updateEntry');
+		$compile(formElem)($scope);
+		$scope.$apply();
+		spyOn($scope, 'updateEntry');
 	    $scope.formEntry.setData({objectId: '12345'});
 		$scope.submitForm();
 		$httpBackend.flush();

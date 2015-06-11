@@ -3,9 +3,9 @@ euiApp = angular.module('euiApp', ['ngAnimate', 'ngRoute']);
 
 //config object
 euiApp.constant('config', {
-	parseAppId: "6ZnVevmNv2VzALQhRWjADH2SqQ5xkvr67LKOj7d7",
-	parseApiKey: "oMhvYcxIT4OVqcA7RFLbQsVXDVMgqIOUHmtylPcw",
-	parseApiUrl: "https://api.parse.com/1",
+  parseAppId: "6ZnVevmNv2VzALQhRWjADH2SqQ5xkvr67LKOj7d7",
+  parseApiKey: "oMhvYcxIT4OVqcA7RFLbQsVXDVMgqIOUHmtylPcw",
+  parseApiUrl: "https://api.parse.com/1",
   geonamesUser: 'jdewitt3',
   geonamesApiUrl: 'http://api.geonames.org'
 });
