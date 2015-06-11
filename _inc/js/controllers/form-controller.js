@@ -15,7 +15,7 @@ euiApp.controller('FormController', ['$scope', '$http', '$timeout', '$location',
 		$scope.getCountries();
 
 		//if editing, we need the state list too...
-		if($scope.formEntry.country) {
+		if($scope.formEntry.country.geonameId) {
 			$scope.updateStateList();
 		}
 	};
