@@ -25,6 +25,6 @@
     "phantomjs": "^1.9.17"
   },
   "scripts": {
-    "postinstall": "echo postinstall time; node_modules/grunt-cli/bin/grunt build"
+    "postinstall": "echo postinstall time; grunt build"
   }
 }
