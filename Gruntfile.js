@@ -106,4 +106,5 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['jshint', 'sass', 'connect', 'karma', 'watch']);
   grunt.registerTask('bootstrap', ['jshint', 'sass', 'connect', 'karma', 'watch']);
+  grunt.registerTask('build', ['sass']);
 };
